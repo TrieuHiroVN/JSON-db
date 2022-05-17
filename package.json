@@ -1,0 +1,16 @@
+{
+  "name": "jsondb",
+  "version": "1.0.0",
+  "description": "JSON Database",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "nodemon --ignore test/data.json --inspect test/index.js"
+  },
+  "keywords": [
+    "database",
+    "db",
+    "json"
+  ],
+  "author": "TrieuHiroVN",
+  "license": "MIT"
+}
