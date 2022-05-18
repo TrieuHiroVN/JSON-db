@@ -12,5 +12,8 @@
     "json"
   ],
   "author": "TrieuHiroVN",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.34"
+  }
 }
