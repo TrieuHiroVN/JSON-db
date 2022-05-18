@@ -72,8 +72,12 @@ export function add (path: string, key: string, value: number): void {
     writeJSON(Path.resolve(path), values, true);
 };
 
-export function remove (path: string, key: string): void {
+export function unset (path: string, key: string): void {
     const values = read(path);
     delete values[key];
     writeJSON(Path.resolve(path), values, true);
 };
+
+export function clear (path: string): void {
+    writeJSON(Path.resolve(path), {}, true);
+}
