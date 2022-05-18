@@ -2,8 +2,7 @@
   "name": "jsondb",
   "version": "1.0.0",
   "description": "JSON Database",
-  "main": "src/index.ts",
-  "type": "module",
+  "main": "src/index.js",
   "scripts": {
     "test": "nodemon --ignore test/data.json --inspect test/index.js"
   },
