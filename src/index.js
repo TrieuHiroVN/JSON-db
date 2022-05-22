@@ -45,7 +45,7 @@ function pathResolve (path) {
  * 
  * @param {string} path Path of the JSON file
  * @param {string} key Name of the key to get its value
- * @returns any
+ * @returns Value of the key
  */
 
 module.exports.get = (path, key) => {
