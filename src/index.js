@@ -41,6 +41,13 @@ function pathResolve (path) {
     return Path.resolve(path);
 };
 
+/**
+ * 
+ * @param {string} path Path of the JSON file
+ * @param {string} key Name of the key to get its value
+ * @returns any
+ */
+
 module.exports.get = (path, key) => {
     if (typeof path !== 'string') throw new TypeError('path must be a string');
     if (typeof key !== 'string' && typeof key !== 'undefined') throw new TypeError('key must be a string or null');
@@ -51,6 +58,13 @@ module.exports.get = (path, key) => {
     if (key) return values[key];
     return values;
 };
+
+/**
+ * 
+ * @param {string} path Path of the JSON file
+ * @param {string} key Name of the key to set a value
+ * @param {any} value Value of the key
+ */
 
 module.exports.set = (path, key, value) => {
     if (typeof path !== 'string') throw new TypeError('path must be a string');
@@ -63,6 +77,13 @@ module.exports.set = (path, key, value) => {
 
     writeJSON(pathResolve(path), values, true);
 };
+
+/**
+ * 
+ * @param {string} path Path of the JSON file
+ * @param {string} key Name of the key to add a value
+ * @param {number} value Value to add
+ */
 
 module.exports.add = (path, key, value) => {
     if (typeof path !== 'string') throw new TypeError('path must be a string');
@@ -82,6 +103,12 @@ module.exports.add = (path, key, value) => {
     writeJSON(pathResolve(path), values, true);
 };
 
+/**
+ * 
+ * @param {string} path Path of the JSON file
+ * @param {string} key Name of the key to delete
+ */
+
 module.exports.unset = (path, key) => {
     if (typeof path !== 'string') throw new TypeError('path must be a string');
     if (typeof key !== 'string') throw new TypeError('key must be a string');
@@ -93,6 +120,11 @@ module.exports.unset = (path, key) => {
 
     writeJSON(pathResolve(path), values, true);
 };
+
+/**
+ * 
+ * @param {string} path Path of the JSON file
+ */
 
 module.exports.clear = (path) => {
     if (typeof path !== 'string') throw new TypeError('path must be a string');
