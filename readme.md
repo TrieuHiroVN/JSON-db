@@ -38,5 +38,5 @@ db.get(path); // return { user: { name: 'Albert', age: 20 }, aNumber: 4 }
 db.get(path, 'user') // return { name: 'Albert', age: 20 }
 db.get(path, 'database') // return undefined
 
-db.clear(); // clear the database
+db.clear(path); // clear the database
 ```
