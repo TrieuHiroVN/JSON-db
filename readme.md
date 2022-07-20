@@ -38,6 +38,11 @@ db.get(); // return { user: { name: 'Albert', age: 20 }, aNumber: 4 }
 db.get('user') // return { name: 'Albert', age: 20 }
 db.get('database') // return undefined
 
+<<<<<<< HEAD
 // clear the database
 db.clear();
 ```
+=======
+db.clear(path); // clear the database
+```
+>>>>>>> 29aec625ddf4c8fc400c07353e653dc58f81c1f0
