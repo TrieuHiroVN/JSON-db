@@ -1,10 +1,10 @@
 {
-  "name": "jsondb",
-  "version": "1.0.1",
+  "name": "json-db",
+  "version": "1.1.0",
   "description": "JSON Database",
   "main": "src/index.js",
   "scripts": {
-    "test": "nodemon --ignore test/data.json --inspect test/index.js"
+    "test": "nodemon --ignore data.json --inspect test/index.js"
   },
   "keywords": [
     "database",

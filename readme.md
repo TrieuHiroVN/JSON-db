@@ -13,30 +13,31 @@ example_folder
 ```
 
 ```js
-const db = require('json-db');
-const path = 'database/data.json'; // require path from start folder. In this case 'example_folder' is the start folder and 'database/data.json' is path
+const { Database } = require('json-db');
+
+const db = new Database('database/data.json');
 
 // set a value for a key
 db.set(
-    path,
     'database', // key name
     'JSON' // value
 );
-db.set(path, 'user', { name: 'Albert', age: 18 });
-db.set(path, 'aNumber', 1);
+db.set('user', { name: 'Albert', age: 18 });
+db.set('aNumber', 1);
 
 // edit a key contents a value that is a number
-db.add(path, 'aNumber', 3);
-db.add(path, 'user.age', 2) // using dot will also work in an object value
-db.add(path, 'database', 0); // return an error while key 'database' contants a value that is not a number
+db.add('aNumber', 3);
+db.add('user.age', 2) // using dot will also work in an object value
+db.add('database', 0); // return an error while key 'database' contants a value that is not a number
 
 // delete a key
-db.unset(path, 'database');
+db.unset('database');
 
 // get values of a key or the entire json file
-db.get(path); // return { user: { name: 'Albert', age: 20 }, aNumber: 4 }
-db.get(path, 'user') // return { name: 'Albert', age: 20 }
-db.get(path, 'database') // return undefined
+db.get(); // return { user: { name: 'Albert', age: 20 }, aNumber: 4 }
+db.get('user') // return { name: 'Albert', age: 20 }
+db.get('database') // return undefined
 
-db.clear(); // clear the database
+// clear the database
+db.clear();
 ```
